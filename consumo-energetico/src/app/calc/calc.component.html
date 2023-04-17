@@ -1,0 +1,47 @@
+<div class="container">
+    <h1 class="fw-bold fs-1 text-center mb-5"> CONSUMO ENERGÉTICO </h1>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label" >Quantidade de pessoas que moram na casa:</label>
+        <input type="number" class="form-control"  placeholder="exemplo: 3"[(ngModel)]="Residente">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Quantidade de cômodos:</label>
+        <input type="number" class="form-control"  placeholder="exemplo: 4" [(ngModel)]="Comodos">
+      </div>
+
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" [(ngModel)]="LavaRoupa">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Possui Lava roupas</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" [(ngModel)]="SecadoraRoupa">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Possui Secadora de Roupas</label>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Quantidade de TVs:</label>
+        <input type="number" class="form-control"  placeholder="exemplo: 1" [(ngModel)]="Qnt_Tv">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Quantidade de Computadores:</label>
+        <input type="number" class="form-control"  placeholder="exemplo: 2" [(ngModel)]="Qnt_Comp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label" [(ngModel)]="Valor_tarifa">Valor da tarifa:</label>
+        <input type="number" class="form-control" placeholder="exemplo: 4,58" >
+      </div>
+
+      <button type="button" class="btn btn-secondary" onclick="calc()">Calcular</button>
+
+      <!--Resultados-->
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label" >Estimativa de consumo elétrico:</label>
+        <input type="number" class="form-control"   readonly (ngModel)="Estimativa">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label" >Valor da conta mensal:</label>
+        <input type="number" class="form-control" (ngModel)="Valor_mensal" readonly >
+      </div>
+
+
+     
+</div>
