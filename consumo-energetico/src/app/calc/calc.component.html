@@ -10,11 +10,11 @@
       </div>
 
       <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" [(ngModel)]="LavaRoupa">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"  [(ngModel)]="LavaRoupa" (ngModelChange)="valor_switch()">
         <label class="form-check-label" for="flexSwitchCheckDefault">Possui Lava roupas</label>
       </div>
       <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" [(ngModel)]="SecadoraRoupa">
+        <input class="form-check-input" type="checkbox" Srole="switch" id="flexSwitchCheckDefault" [(ngModel)]="SecadoraRoupa" (ngModelChange)="valor_switch()">
         <label class="form-check-label" for="flexSwitchCheckDefault">Possui Secadora de Roupas</label>
       </div>
       <div class="mb-3">
