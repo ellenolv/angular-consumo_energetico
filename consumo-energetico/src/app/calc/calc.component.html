@@ -9,14 +9,13 @@
         <input type="number" class="form-control"  placeholder="exemplo: 4" [(ngModel)]="Comodos">
       </div>
 
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"  [(ngModel)]="LavaRoupa" (ngModelChange)="valor_switch()">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Possui Lava roupas</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" Srole="switch" id="flexSwitchCheckDefault" [(ngModel)]="SecadoraRoupa" (ngModelChange)="valor_switch()">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Possui Secadora de Roupas</label>
-      </div>
+      <div class="alternativas">
+        <label>Assinale se possuir em sua casa:</label><br>
+        <input type="checkbox" id="maquinaLavar" name="maquinaLavar" [(ngModel)]="maquinaLavar">
+        <label for="maquinaLavar"> Máquina de lavar roupa</label><br>
+        <input type="checkbox" id="maquinaSecar" name="maquinaSecar" [(ngModel)]="maquinaSecar" >
+        <label for="maquinaSecar"> Secadora de roupas</label><br>
+        </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Quantidade de TVs:</label>
         <input type="number" class="form-control"  placeholder="exemplo: 1" [(ngModel)]="Qnt_Tv">
@@ -26,20 +25,20 @@
         <input type="number" class="form-control"  placeholder="exemplo: 2" [(ngModel)]="Qnt_Comp">
       </div>
       <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label" [(ngModel)]="Valor_tarifa">Valor da tarifa:</label>
+        <label for="exampleFormControlInput1" class="form-label" [(ngModel)]="ValorTarifa">Valor da tarifa:</label>
         <input type="number" class="form-control" placeholder="exemplo: 4,58" >
       </div>
 
-      <button type="button" class="btn btn-secondary" onclick="calc()">Calcular</button>
+      <button type="button" class="btn btn-secondary" (click)="calc()">Calcular</button>
 
       <!--Resultados-->
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label" >Estimativa de consumo elétrico:</label>
-        <input type="number" class="form-control"   readonly (ngModel)="Estimativa">
+        <p>{{Estimativa}}</p>
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label" >Valor da conta mensal:</label>
-        <input type="number" class="form-control" (ngModel)="Valor_mensal" readonly >
+        <p>{{valorConta}}</p>
       </div>
 
 
