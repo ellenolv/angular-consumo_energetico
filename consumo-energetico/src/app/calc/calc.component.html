@@ -1,9 +1,11 @@
 <div class="container">
     <h1 class="fw-bold fs-1 text-center mb-5"> CONSUMO ENERGÉTICO </h1>
+
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label" >Quantidade de pessoas que moram na casa:</label>
         <input type="number" class="form-control"  placeholder="exemplo: 3"[(ngModel)]="Residente">
       </div>
+
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Quantidade de cômodos:</label>
         <input type="number" class="form-control"  placeholder="exemplo: 4" [(ngModel)]="Comodos">
@@ -15,15 +17,19 @@
         <label for="maquinaLavar"> Máquina de lavar roupa</label><br>
         <input type="checkbox" id="maquinaSecar" name="maquinaSecar" [(ngModel)]="maquinaSecar" >
         <label for="maquinaSecar"> Secadora de roupas</label><br>
-        </div>
+      </div>
+
+
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Quantidade de TVs:</label>
         <input type="number" class="form-control"  placeholder="exemplo: 1" [(ngModel)]="Qnt_Tv">
       </div>
+
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Quantidade de Computadores:</label>
         <input type="number" class="form-control"  placeholder="exemplo: 2" [(ngModel)]="Qnt_Comp">
       </div>
+
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label" >Valor da tarifa:</label>
         <input type="number" class="form-control" placeholder="exemplo: 0.45" [(ngModel)]="Tarifa">
@@ -36,11 +42,10 @@
         <label for="exampleFormControlInput1" class="form-label" >Estimativa de consumo elétrico:</label>
         <p>{{Estimativa}} kWh</p>
       </div>
+
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label" >Valor da conta mensal:</label>
         <p>R$ {{valorConta}}</p>
       </div>
-
-
      
 </div>
