@@ -25,8 +25,8 @@
         <input type="number" class="form-control"  placeholder="exemplo: 2" [(ngModel)]="Qnt_Comp">
       </div>
       <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label" [(ngModel)]="ValorTarifa">Valor da tarifa:</label>
-        <input type="number" class="form-control" placeholder="exemplo: 4,58" >
+        <label for="exampleFormControlInput1" class="form-label" >Valor da tarifa:</label>
+        <input type="number" class="form-control" placeholder="exemplo: 0.45" [(ngModel)]="Tarifa">
       </div>
 
       <button type="button" class="btn btn-secondary" (click)="calc()">Calcular</button>
@@ -34,11 +34,11 @@
       <!--Resultados-->
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label" >Estimativa de consumo elétrico:</label>
-        <p>{{Estimativa}}</p>
+        <p>{{Estimativa}} kWh</p>
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label" >Valor da conta mensal:</label>
-        <p>{{valorConta}}</p>
+        <p>R$ {{valorConta}}</p>
       </div>
 
 

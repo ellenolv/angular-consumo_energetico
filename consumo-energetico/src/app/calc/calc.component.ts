@@ -13,15 +13,13 @@ export class CalcComponent {
   maquinaSecar: boolean = false;
   Qnt_Tv!: number;
   Qnt_Comp!: number;
-  ValorTarifa: number = 0;
+  Tarifa: number = 0;
   maqLavar: number = 0;
   maqSecar: number = 0; 
 
-  Estimativa!: number;
-  valorConta!: number;
+  Estimativa: number = 0;
+  valorConta: number = 0;
 
-mes : number =0;
-convert : number = 0;
 
 calc() {
   let banho = this.Residente * 533.33; 
@@ -43,13 +41,19 @@ calc() {
     this.maqSecar = 0;
    }
 
-   this.convert = (banho + lampada + televisao + computador) / 1000;
-   this.mes = (this.convert * 30) + (this.maqSecar + this.maqLavar);
+   this.Estimativa = (banho + lampada + televisao + computador) / 1000;
+   this.Estimativa = (this.Estimativa * 30) + (this.maqSecar + this.maqLavar);
+    this.Estimativa = parseFloat(this.Estimativa.toFixed(2));//formatar para 2 casa decimais
+    console.log(' Estimativa2: ', this.Estimativa);
 
-    this.Estimativa = this.mes;
-    this.Estimativa = parseFloat(this.Estimativa.toFixed(2));
-    this.valorConta = this.mes * this.ValorTarifa;
-    this.valorConta = parseFloat(this.valorConta.toFixed(2));
+    this.valorConta = this.Tarifa * this.Estimativa;
+    console.log('Valor1: ', this.Tarifa);
+
+
+   this.valorConta = parseFloat(this.valorConta.toFixed(2));
+   console.log('Valor2: ', this.valorConta);
+
+
 }
   
 }
